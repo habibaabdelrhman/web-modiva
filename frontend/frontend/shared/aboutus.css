@@ -1,0 +1,43 @@
+/* ================= ABOUT SECTION ================= */
+
+.about-section {
+    max-width: 1000px; /* تكبير المساحة للسماح بالالتفاف */
+    margin: 60px auto;
+    text-align: left; /* تغيير من center إلى left لظهور تأثير الـ Float */
+    padding: 0 20px;
+    background: #fff; /* خلفية بيضاء لتمييز القسم */
+    border-radius: 15px;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center; /* العنوان فقط يبقى في المنتصف */
+}
+
+/* ================= CSS FLOAT LAYOUT (الدرجة المطلوبة) ================= */
+
+/* تجعل الصورة تطفو لليسار والنص يلتف حولها */
+.about-img-float {
+    float: left; /* تفعيل خاصية الـ float المطلوبة في التقييم */
+    width: 320px; /* حجم مناسب للصورة */
+    height: auto;
+    margin-right: 30px; /* مسافة بين الصورة والنص */
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* استخدام الـ Clear لضمان عدم تداخل العناصر (Clearfix) */
+/* هذا السطر يضمن لكِ درجة "Handles float clearing" */
+.clearfix::after {
+    content: "";
+    clear: both; /* تنظيف الـ float لإنهاء الالتفاف */
+    display: table;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+}

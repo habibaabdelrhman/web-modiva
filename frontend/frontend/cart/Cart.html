@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart / Checkout</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="checkout-container">
+
+        <h1 class="title">Your Cart</h1>
+        <p class="subtitle">Review your items and place your order</p>
+
+        <div id="cart-items" class="checkout-card">
+            </div>
+
+        <div class="total-section" style="margin: 20px 0; font-size: 1.2rem; font-weight: bold; text-align: right;">
+            Total Amount: $<span id="total-price">0.00</span>
+        </div>
+
+        <div class="input-row">
+            <label class="label">Delivery Address</label>
+            <input type="text" id="address" class="input-field" placeholder="Enter your delivery address">
+        </div>
+
+        <div class="btn-row">
+            <button class="btn-primary" id="order-btn">Order Now</button>
+            <button id="continueBtn" class="btn-secondary">Continue Shopping</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="Cart.js"></script>
+
+</body>
+</html>

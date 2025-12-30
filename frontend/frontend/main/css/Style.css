@@ -1,0 +1,607 @@
+/* ========================= RESET ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ========================= BODY ========================= */
+
+body {
+    background-color: #f5f3ef;
+    color: #1a1a1a;
+    padding-top: 100px;
+    /* space for fixed navbar */
+}
+/* ========================= NAVBAR ========================= */
+
+header.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+header a,
+header h1,
+header h2 {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.navbar .logo {
+    font-family: 'Playfair Display', cursive;
+    /* Elegant, fashion style */
+    font-size: 2.5rem;
+    color: #c5a46d;
+    /* soft gold accent */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.navbar .logo:hover {
+    color: #1a1a1a;
+    /* deep charcoal on hover */
+    transform: scale(1.1) rotate(-2deg);
+    cursor: pointer;
+}
+
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .nav-right a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.navbar .nav-right a:hover {
+    color: #c5a46d;
+}
+
+.menu-icon {
+    font-size: 36px;
+    color: #1a1a1a;
+    cursor: pointer;
+    display: block;
+}
+/* ========================= SIDE MENU ========================= */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #8f6f6f;
+    padding-top: 80px;
+    transition: 0.3s ease;
+    z-index: 1200;
+}
+
+.side-menu.open {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    border-bottom: 1px solid #333;
+}
+
+.side-menu ul li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.side-menu ul li a:hover {
+    background-color: #c5a46d;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 38px;
+    color: #fff;
+    cursor: pointer;
+}
+/* ========================= PRODUCT FULL ========================= */
+
+.product-full {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #ffdf;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-full img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-full h2 {
+    margin: 15px 0 10px;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.product-full p {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.product-full .sizes button {
+    margin: 5px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.product-full .sizes button:hover {
+    background-color: #c5a46d;
+}
+
+.product-full .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: 1px solid #111;
+    background-color: #1a1a1a;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-full .btn:hover {
+    background-color: #111;
+    color: #fff;
+}
+/* ========================= PROMO SECTION ========================= */
+
+.promo-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    padding: 40px 50px;
+}
+
+.promo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.promo-card .promo-text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
+}
+
+.promo-card .promo-text h3 {
+    margin-bottom: 10px;
+}
+
+.promo-card .promo-text button {
+    padding: 8px 15px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Specific card positions */
+
+.promo-card.card1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    /* spans two rows */
+    height: 500px;
+    /* large left card */
+}
+
+.promo-card.card2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 240px;
+    /* top right small card */
+}
+
+.promo-card.card3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 240px;
+    /* bottom right small card */
+}
+/* ========================= PRODUCTS GRID ========================= */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px 50px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+/* Sizes buttons */
+
+.product-card .sizes button {
+    padding: 5px 8px;
+    margin: 2px;
+    border: 1px solid #111;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.product-card .sizes button:hover {
+    background-color: #f2f2f2;
+}
+/* Add to cart button */
+
+.product-card .add-cart-btn {
+    padding: 8px 15px;
+    border: none;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+.product-card .add-cart-btn:hover {
+    background-color: #555;
+}
+/* ========================= RESPONSIVE ========================= */
+
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-card img {
+        height: 120px;
+    }
+}
+/* ========================= MEDIA SLIDER ========================= */
+
+.media-slider {
+    width: 100%;
+    height: 80vh;
+    /* adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.media-slider img,
+.media-slider video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.media-slider img.active,
+.media-slider video.active {
+    opacity: 1;
+}
+/* Remove space between header and slider */
+
+body,
+header,
+.navbar,
+.media-slider {
+    margin: 0;
+    padding: 0;
+}
+/* ========================= FAVOURITE-ICON ========================= */
+
+.fav-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #e12020;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.fav-icon:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+.product-card {
+    position: relative;
+    /* Needed for absolute fav-icon */
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-link i {
+    font-size: 22px;
+    color: #111;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon-link i:hover {
+    color: #D9B17F;
+    /* gold hover like MODIVA */
+    transform: scale(1.1);
+}
+/* ========================= FOOTER ========================= */
+
+.footer {
+    background-color: #1a1a1a;
+    /* black luxury footer */
+    color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+/* Footer Links */
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    color: #f5f5f5;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #c5a46d;
+    /* soft gold hover */
+}
+/* Social Icons */
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #f5f5f5;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #c5a46d;
+    /* gold hover */
+    transform: scale(1.2);
+}
+/* Responsive Footer */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+    .footer-links {
+        gap: 15px;
+    }
+    .social-icon {
+        font-size: 20px;
+    }
+}
+/* ================= PROMO SECTION ================= */
+.promo-section {
+    margin: 40px;
+}
+
+.promo-card {
+    margin-bottom: 30px; /* مسافة بين الكروت */
+}
+
+/* الصورة تطفو على اليسار */
+.promo-img {
+    float: left;
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* نص الـ promo */
+.promo-text {
+    overflow: hidden; /* يمنع النص من تجاوز الصورة */
+}
+
+/* Clear floats بعد كل promo-card */
+.promo-card::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* زر احترافي */
+.promo-text button {
+    padding: 8px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.promo-text button:hover {
+    background-color: #444;
+}
+
+/* ================= PRODUCTS GRID مختصر ================= */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 1 1 calc(33% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.add-cart-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-cart-btn:hover {
+    background-color: #444;
+}
+
+
+.side-menu ul {
+    list-style: none;  /* إزالة النقاط الافتراضية */
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    margin-bottom: 15px;
+    overflow: auto; /* clear float */
+}
+
+.side-menu li a::before {
+    content: "•";        /* نقطة قبل كل رابط */
+    float: left;         /* تجعلها على الشمال */
+    color: #ff4d6d;      /* لون النقطة */
+    margin-right: 10px;  /* مسافة بين النقطة والنص */
+}
+/* تنسيق أيقونة القلب عشان تظهر فوق الصورة بشكل شيك */
+.fav-icon-style {
+    position: absolute !important;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 10;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.fav-icon-style:hover {
+    transform: scale(1.1); /* تكبير بسيط عند الوقوف بالماوس */
+}
+
+/* التأكد إن الكارت "أب" عشان القلب يثبت جواه */
+.product-card {
+    position: relative !important;
+}

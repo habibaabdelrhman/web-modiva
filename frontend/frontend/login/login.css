@@ -1,0 +1,137 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #fdecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4a2c35;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.login-container {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 34px 30px 42px;
+    box-shadow: 0 12px 32px rgba(232, 121, 154, 0.18);
+    border: 1px solid #f3c6d4;
+}
+
+/* TABS */
+.login-container input[type="radio"] { display: none; }
+
+.login-container .item {
+    font-size: 16px;
+    margin-right: 20px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    color: #a35b73;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.login-container .sign-in:checked + .item,
+.login-container .sign-up:checked + .item {
+    color: #c2185b;
+    border-color: #f06292;
+    font-weight: 600;
+}
+
+/* FORM AREA */
+.login-form { margin-top: 32px; position: relative; min-height: 300px; }
+
+.sign-in-htm, .sign-up-htm {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(14px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.sign-in:checked ~ .login-form .sign-in-htm { opacity:1; transform:translateY(0); pointer-events:auto; }
+.sign-up:checked ~ .login-form .sign-up-htm { opacity:1; transform:translateY(0); pointer-events:auto; }
+
+/* INPUTS */
+.group { margin-bottom: 16px; position: relative; }
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #f3c6d4;
+    outline: none;
+    background: #fffafb;
+    color: #4a2c35;
+    font-size: 14px;
+}
+
+.input:focus { border-color: #f06292; box-shadow: 0 0 0 3px rgba(240,98,146,0.2); }
+
+.toggle-pass {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    cursor: pointer;
+    user-select: none; 
+    font-size: 14px;
+}
+
+/* BUTTON */
+.button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #f06292;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.button:hover { background:#ec407a; }
+
+/* DIVIDER */
+.hr { height:1px; margin:28px 0; background:#f3c6d4; }
+
+/* FOOTER */
+.footer { text-align:center; font-size:13px; color:#a35b73; }
+.footer a, .footer label { color:#c2185b; cursor:pointer; text-decoration:none; font-weight:500; }
+.footer a:hover, .footer label:hover { text-decoration:underline; }
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .login-container { padding:28px 24px 36px; }
+    .login-container .item { font-size:15px; }
+}
+@media (max-width: 360px) {
+    .container { padding:16px; }
+    .login-container { padding:24px 20px 32px; }
+}
+/* كود عشان ناخد درجة الـ Float */
+.input-group {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* ده عشان يظبط اللي بعد الـ Float */
+.input-group::after {
+    content: "";
+    display: table;
+    clear: both;
+}

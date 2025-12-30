@@ -1,0 +1,167 @@
+/* ===== Global ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EAEDED;
+    color: #111;
+}
+
+
+/* ===== Checkout Container ===== */
+
+.checkout-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== Titles ===== */
+
+h1.title {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+p.subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* ===== Input Row ===== */
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.input-row label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/* ===== Input Fields ===== */
+
+.input-field {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-field:focus {
+    border-color: #649aac;
+    box-shadow: 0 0 5px rgba(255, 153, 0, 0.3);
+}
+
+
+/* ===== Select Cursor ===== */
+
+select.input-field {
+    cursor: pointer;
+}
+
+
+/* ===== Buttons Row ===== */
+
+.btn-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+/* ===== Order Now Button ===== */
+
+.btn-primary {
+    flex: 1;
+    background-color: #93bdd7;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #62959e;
+}
+
+
+/* ===== Continue Shopping Button ===== */
+
+.btn-secondary {
+    flex: 1;
+    background-color: #93bdd7;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #62959e;
+}
+
+
+/* ===== Remove Item Button ===== */
+
+.remove-btn {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background-color: #d50000;
+}
+
+
+/* ===== Cart Item Card ===== */
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+}
+
+.cart-item span {
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .btn-row {
+        flex-direction: column;
+    }
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
